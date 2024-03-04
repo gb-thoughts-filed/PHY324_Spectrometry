@@ -55,3 +55,12 @@ def power_with_error(base_with_uncertainty, exponent):
     return power_result, power_error
 
 
+def round_to_error(value, error):
+    if error == 0:
+        return value, error
+
+    significant_figures = -int(np.floor(np.log10(abs(error))))
+    rounded_error = round(error, significant_figures)
+    rounded_value = round(value, significant_figures)
+
+    return rounded_value, rounded_error
