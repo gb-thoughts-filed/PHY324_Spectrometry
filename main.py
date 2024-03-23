@@ -42,6 +42,10 @@ if __name__ == '__main__':
     print("popt mercury",popt_mercury)
     print("pcov mercury", pcov_mercury)
 
+    p_sigma_mercury = np.sqrt(np.diag(pcov_mercury))
+
+    print("p sigma mercury", p_sigma_mercury)
+
     plt.figure(1)
     plt.errorbar(m_expec_w_values, m_exper_w_values, yerr=m_exper_uncer, marker="o", ls='',
                  label="Raw Data", markersize=10)
@@ -102,6 +106,9 @@ if __name__ == '__main__':
                                                              absolute_sigma=True)
     print("popt energy mercury", popt_energy_mercury)
     print("pcov energy mercury", pcov_energy_mercury)
+
+    p_sigma_mercury_energy = np.sqrt(np.diag(pcov_energy_mercury))
+    print("p sigma energy mercury", p_sigma_mercury_energy)
 
     plt.figure(3)
     plt.errorbar(m_energy_expec_w_values, m_energy_exper_w_values, yerr=m_energy_exper_uncer, marker="o", ls='',
