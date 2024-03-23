@@ -6,7 +6,7 @@ def linear(x, a, b):
 
 def non_linear(x, c, d, e):
 
-    return c+x++d +e
+    return c*x**d +e
 
 def energies(expected_wavelength_lst: list, planck_const, speed_of_light):
 
@@ -43,7 +43,7 @@ def reduced_chi_squared(data_ys, predicted_ys, uncertainties, num_elements, num_
     return red_chi_squared
 
 def hydrogen_energies_of_quantum_states(Z, n):
-    return -(13.6*Z**2)/(n**2)
+    return -(13.6*(Z**2))/(n**2)
 
 def balmer_series(Z, n):
     rydberg_eh = 13.605693

@@ -32,7 +32,7 @@ def divide_with_errors(value1_with_uncertainty, value2_with_uncertainty):
     return quotient, quotient_error
 
 
-def sum_with_errors(values_with_uncertainties: list[list]):
+def sum_with_errors(values_with_uncertainties):
     sum_result = 0.0
     squared_errors_sum = 0.0
 
